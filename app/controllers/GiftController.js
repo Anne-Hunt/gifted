@@ -33,14 +33,15 @@ export class GiftController {
     }
 
     async createGift() {
-        // @ts-ignore
-        event.target.reset()
         event.preventDefault()
         try {
             const formData = getFormData(event.target)
             await giftService.createGift(formData)
+            // @ts-ignore
+            document.getElementById('form-for-reset').reset()
         } catch (error) {
             Pop.error('Could not create gift!')
+            console.log(error)
         }
     }
 }
