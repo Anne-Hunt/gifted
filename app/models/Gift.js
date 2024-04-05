@@ -13,7 +13,7 @@ export class Gift {
             <div class="card shadow" onclick="app.GiftController.openGift('${this.id}')">
                 <img src="${this.url}" alt="" class="card-img-top">
                 <div class="card-body">
-                    <h5 class="card-title">${this.tag}</h5>
+                    <h5 class="card-title roboto">${this.tag}</h5>
                 </div>
             </div>
         </div>
